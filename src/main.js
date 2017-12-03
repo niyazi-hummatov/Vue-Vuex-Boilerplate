@@ -5,6 +5,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Resource from 'vue-resource'
 import VueCookie from 'vue-cookie'
+import BootstrapVue from 'bootstrap-vue'
 
 import filters from './filters'
 import routerMap from './config/routers'
@@ -16,6 +17,7 @@ Vue.config.productionTip = false
 // 实例化Vue的filter
 Object.keys(filters).forEach(k => Vue.filter(k, filters[k]))
 
+Vue.use(BootstrapVue)
 Vue.use(VueCookie)
 Vue.use(Resource)
 initResource(Vue)
